@@ -10,6 +10,7 @@ var DOMAIN_NAME = 'sandbox9fe98e320e20473a93c1b15356c63158.mailgun.org'
 var UI_PATH = process.env.UI_PATH
 app.use(cors())
 app.use(bodyParser.json())
+app.options('*', cors())
 app.post('/messages', function(req, res) {
   var data = {
     from: 'rudydeberry@sandbox9fe98e320e20473a93c1b15356c63158.mailgun.org',
