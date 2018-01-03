@@ -9,7 +9,7 @@ var API_KEY = process.env.MAILGUN_API_KEY
 var DOMAIN_NAME = 'sandbox9fe98e320e20473a93c1b15356c63158.mailgun.org'
 app.use(cors())
 app.use(bodyParser.json())
-app.options('*', cors())
+app.options('https://rudydeberry.com', cors())
 app.post('/messages', function(req, res) {
   var data = {
     from: 'rudydeberry@sandbox9fe98e320e20473a93c1b15356c63158.mailgun.org',
